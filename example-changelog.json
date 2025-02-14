@@ -1,0 +1,158 @@
+{ "databaseChangeLog": [
+  {
+    "changeSet": {
+      "id": "1",
+      "author": "Paul",
+      "labels": "example-label",
+      "context": "example-context",
+      "comment": "paul-made-the-first-person-database-table",
+      "changes": [
+        {
+          "createTable": {
+            "tableName": "person",
+            "columns": [
+              {
+                "column": {
+                  "name": "id",
+                  "type": "int",
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primarykey": true,
+                    "nullable": false
+                  }
+                }
+              },
+              {
+                "column": {
+                  "name": "name",
+                  "type": "varchar(50)",
+                  "constraints": {
+                    "nullable": false
+                  }
+                }
+              },
+              {
+                "column": {
+                  "name": "addresss1",
+                  "type": "varchar(50)"
+                }
+              },
+              {
+                "column": {
+                  "name": "addresss2",
+                  "type": "varchar(50)"
+                }
+              },
+              {
+                "column": {
+                  "name": "city",
+                  "type": "varchar(30)"
+                }
+              }
+            ]
+          }
+        }]
+    }
+  },
+  {
+    "changeSet": {
+      "id": "2",
+      "author": "ringo",
+      "labels": "example-label",
+      "context": "example-context",
+      "comment": "ringo-made-the-company-table",
+      "changes": [
+        {
+          "createTable": {
+            "tableName": "company",
+            "columns": [
+              {
+                "column": {
+                  "name": "id",
+                  "type": "int",
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primarykey": true,
+                    "nullable": false
+                  }
+                }
+              },
+              {
+                "column": {
+                  "name": "name",
+                  "type": "varchar(50)",
+                  "constraints": {
+                    "nullable": false
+                  }
+                }
+              },
+              {
+                "column": {
+                  "name": "addresss1",
+                  "type": "varchar(50)"
+                }
+              },
+              {
+                "column": {
+                  "name": "addresss2",
+                  "type": "varchar(50)"
+                }
+              },
+              {
+                "column": {
+                  "name": "city",
+                  "type": "varchar(30)"
+                }
+              }
+            ]
+          }
+        }]
+    }
+  },
+  {
+    "changeSet": {
+      "id": "3",
+      "author": "george",
+      "labels": "example-label",
+      "context": "example-context",
+      "comment": "george-added-the-country-column-to-the-person-database-table",
+      "changes": [
+        {
+          "addColumn": {
+            "tableName": "person",
+            "columns": [
+              {
+                "column": {
+                  "name": "country",
+                  "type": "varchar(2)"
+                }
+              }
+            ]
+          }
+        }]
+    }
+  },
+  {
+    "changeSet": {
+      "id": "4",
+      "author": "john",
+      "labels": "example-label",
+      "context": "example-context",
+      "comment": "john-added-the-region-column-to-the-person-table",
+      "changes": [
+        {
+          "addColumn": {
+            "tableName": "person",
+            "columns": [
+              {
+                "column": {
+                  "name": "region",
+                  "type": "varchar(2)"
+                }
+              }
+            ]
+          }
+        }]
+    }
+  }
+]}
